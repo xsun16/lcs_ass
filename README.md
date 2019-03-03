@@ -2,11 +2,11 @@
 ## Dynamic Programming
 
 ## Part I. Longest Common Subsequence of Two Sequences
-Compute the length of a longest common subsequence of two sequences 𝐴 = (𝑎1, 𝑎2, . . . , 𝑎𝑛) and 𝐵 = (𝑏1, 𝑏2, . . . , 𝑏𝑚), defined as the largest non-negative integer 𝑝 such that there exist indices 1 ≤ 𝑖1 < 𝑖2 < · · · < 𝑖𝑝 ≤ 𝑛 and 1 ≤ 𝑗1 < 𝑗2 < · · · < 𝑗𝑝 ≤ 𝑚, such that 𝑎𝑖1 = 𝑏𝑗1 , . . . , 𝑎𝑖𝑝 = 𝑏𝑗𝑝 .
+Compute the length of a longest common subsequence of two sequences 𝐴 = (𝑎<sub>1</sub>, 𝑎<sub>2</sub>, . . . , 𝑎<sub>n</sub>) and 𝐵 = (𝑏<sub>1</sub>, 𝑏<sub>2</sub>, . . . , 𝑏<sub>m</sub>), defined as the largest non-negative integer 𝑝 such that there exist indices 1 ≤ 𝑖<sub>1</sub> < 𝑖<sub>2</sub> < · · · < 𝑖<sub>p</sub> ≤ 𝑛 and 1 ≤ 𝑗<sub>1</sub> < 𝑗<sub>2</sub> < · · · < 𝑗<sub>p</sub> ≤ 𝑚, such that 𝑎<sub>i1</sub> = 𝑏<sub>j1</sub> , . . . , 𝑎<sub>ip</sub> = 𝑏<sub>jp</sub> .
 
-<strong>Input:</strong> two sequences 𝐴 = (𝑎1, 𝑎2, . . . , 𝑎𝑛) and 𝐵 = (𝑏1, 𝑏2, . . . , 𝑏𝑚)
+<strong>Input:</strong> two sequences 𝐴 and 𝐵 of lengths *n* and *m* respectively.
 
-<strong>Output</strong>: the length of their longest common subsequence
+<strong>Output</strong>: the length *p* of their longest common subsequence
 
 <strong>Input format</strong>
 <pre>
@@ -14,7 +14,7 @@ First line: 𝑛.
 Second line: 𝑎1, 𝑎2, . . . , 𝑎𝑛. 
 Third line: 𝑚. 
 Fourth line: 𝑏1, 𝑏2, . . . , 𝑏𝑚. 
-Constraints. 1 ≤ 𝑛, 𝑚 ≤ 100; −10^9 < 𝑎𝑖, 𝑏𝑖 < 10^9.
+Constraints. 1 ≤ 𝑛, 𝑚 ≤ 100; −2<sup>9</sup> < 𝑎𝑖, 𝑏𝑖 < 2<sup>9</sup>.
 </pre>
 <strong>Output Format</strong> 
 <pre>
@@ -59,10 +59,7 @@ One common subsequence is (2, 7). Another one is (2, 8).
 Implement the solution to the LCP2 problem in file `lcp2.c`.
 
 ## Part II. Longest Common Subsequence of Three Sequences
-Given three sequences 𝐴 = (𝑎1, 𝑎2, . . . , 𝑎𝑛), 𝐵 = (𝑏1, 𝑏2, . . . , 𝑏𝑚), and 𝐶 = (𝑐1, 𝑐2, . . . , 𝑐𝑙), find the
-length of their longest common subsequence, i.e., the largest non-negative integer 𝑝 such that there
-exist indices 1 ≤ 𝑖1 < 𝑖2 < · · · < 𝑖𝑝 ≤ 𝑛, 1 ≤ 𝑗1 < 𝑗2 < · · · < 𝑗𝑝 ≤ 𝑚, 1 ≤ 𝑘1 < 𝑘2 < · · · < 𝑘𝑝 ≤ 𝑙 such
-that 𝑎𝑖1 = 𝑏𝑗1 = 𝑐𝑘1 , . . . , 𝑎𝑖𝑝 = 𝑏𝑗𝑝 = 𝑐𝑘𝑝.
+Given three sequences 𝐴 = (𝑎<sub>1</sub>, 𝑎<sub>2</sub>, . . . , 𝑎<sub>n</sub>), 𝐵 = (b<sub>1</sub>, b<sub>2</sub>, . . . , b<sub>m</sub>), and 𝐶 = (c<sub>1</sub>, c<sub>2</sub>, . . . , c<sub>l</sub>), find the length of their longest common subsequence, i.e., the largest non-negative integer 𝑝 such that there exist indices 1 ≤ 𝑖<sub>1</sub> < 𝑖<sub>2</sub> < · · · < 𝑖<sub>p</sub> ≤ 𝑛, 1 ≤ 𝑗<sub>1</sub> < 𝑗<sub>2</sub> < · · · < 𝑗<sub>p</sub> ≤ 𝑚, 1 ≤ 𝑘<sub>1</sub> < 𝑘<sub>2</sub> < · · · < 𝑘<sub>p</sub> ≤ 𝑙 such that 𝑎<sub>i1</sub> = 𝑏<sub>j1</sub> = 𝑐<sub>k1</sub> , . . . , 𝑎<sub>ip</sub> = 𝑏<sub>jp</sub> = 𝑐<sub>kp</sub>.
 
 The input and output formats are the same as for the previous problem.
 
