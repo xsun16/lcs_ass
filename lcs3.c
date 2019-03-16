@@ -8,8 +8,25 @@ void print_array(int *arr, int size){
 	printf("\n");
 }
 
+int get_max(int a, int b, int c){
+   	if(a>b && a>c)
+      		return a;
+   	if(b>a && b>c)
+      		return b;
+   	return c;
+}
+
 int lcs3(int *a, int n,  int *b, int m, int *c, int l) {
 	//write your code here
+	if (n == 0 || m == 0 || l == 0)
+      			return 0;
+   	else {
+      		if((*(a+n-1) == *(b+m-1)) && (*(b+m-1) == *(c+l-1))){
+         				return get_max(lcs3(a, n, b, m-1, c, l), lcs3(a, n-1, b, m, c, l), lcs3(a, n, b, m, c, l-1)) + 1;
+      	}else{
+        	return get_max(lcs3(a, n, b, m-1, c, l), lcs3(a, n-1, b, m, c, l), lcs3(a, n, b, m, c, l-1));
+      	}
+   	}
 	return 0;
 }
 
